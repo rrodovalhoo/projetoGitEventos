@@ -1,11 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestão de Eventos Acadêmicos</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f4f9; }
+        h1, h2 { color: #333; }
+        .container { display: flex; gap: 30px; flex-wrap: wrap; }
+        .card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); flex: 1; min-width: 300px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input, textarea, button { width: 100%; padding: 8px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; }
+        button { background-color: #28a745; color: white; border: none; font-size: 16px; cursor: pointer; }
+        button:hover { background-color: #218838; }
+        .evento-item { background: #eef; padding: 10px; margin-bottom: 10px; border-left: 4px solid #007bff; border-radius: 4px; }
+    </style>
 </head>
 <body>
-    <h1>Sistema de Gerenciamento de Eventos Academicos</h1>
+
+    <h1>🏛️ Sistema de Gerenciamento de Eventos Acadêmicos</h1>
+
+    <div class="container">
+        <!-- Área de Cadastro -->
+        <section class="card">
+            <h2>📝 Cadastrar Evento</h2>
+            <form id="form-evento">
+                <div class="form-group">
+                    <label for="nome">Nome do Evento:</label>
+                    <input type="text" id="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="descricao">Descrição:</label>
+                    <textarea id="descricao" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="data">Data:</label>
+                    <input type="date" id="data" required>
+                </div>
+                <div class="form-group">
+                    <label for="horario">Horário:</label>
+                    <input type="time" id="horario" required>
+                </div>
+                <div class="form-group">
+                    <label for="local">Local:</label>
+                    <input type="text" id="local" required>
+                </div>
+                <div class="form-group">
+                    <label for="responsavel">Responsável:</label>
+                    <input type="text" id="responsavel" required>
+                </div>
+                <div class="form-group">
+                    <label for="vagas">Quantidade de Vagas:</label>
+                    <input type="number" id="vagas" required min="1">
+                </div>
+                <button type="submit">Cadastrar Evento</button>
+            </form>
+        </section>
+
+        <!-- Área de Consulta/Listagem -->
+        <section class="card">
+            <h2>🔍 Eventos Cadastrados</h2>
+            <div id="lista-eventos">
+                <p>Nenhum evento cadastrado até o momento.</p>
+            </div>
+        </section>
+    </div>
+
 </body>
 </html>
