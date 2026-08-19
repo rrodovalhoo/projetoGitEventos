@@ -1,5 +1,4 @@
-# Sistema de Gerenciamento de Eventos Acadêmicos
-
+# Sistema de Eventos Acadêmicos - Versão Azul 🟦
 Projeto desenvolvido para praticar versionamento com Git e GitHub.
 
 ## 🛠️ Tecnologias
